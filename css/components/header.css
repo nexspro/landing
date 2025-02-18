@@ -1,0 +1,24 @@
+header {
+  text-align: center;
+  padding: 20px 0;
+  width: 100vw;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.glow {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(217, 0, 0, 0.7), 0 0 16px #D90000;
+  margin: 0;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: 5px;
+}

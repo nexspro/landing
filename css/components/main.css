@@ -1,0 +1,339 @@
+main {
+  position: relative;
+  background: url("../../image/darth_maul.gif") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px;
+  color: var(--color-text);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.dark-side-content, .darth-maul {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.sith-lords {
+  text-align: center;
+  padding: 50px;
+}
+
+.sith-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+
+.sith-card {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--color-primary);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 220px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+}
+
+.sith-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--color-primary), 0 0 40px rgba(255, 0, 0, 0.7);
+  border-color: var(--color-primary);
+}
+
+.sith-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.sith-card:hover img {
+  transform: scale(1.1);
+}
+
+.sith-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-shadow: 0 0 5px var(--color-primary);
+  margin-top: 10px;
+}
+
+@keyframes glowEffect {
+  0% { box-shadow: 0 0 10px var(--color-primary); }
+  50% { box-shadow: 0 0 20px var(--color-primary), 0 0 40px rgba(255, 0, 0, 0.6); }
+  100% { box-shadow: 0 0 10px var(--color-primary); }
+}
+
+.sith-card:hover {
+  animation: glowEffect 1.5s infinite alternate;
+}
+
+.sith-descriptions {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sith-description {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  padding: 15px;
+  width: 230px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  height: auto;
+  margin-top: 20px;
+}
+
+.sith-description:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+
+.sith-description h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  text-shadow: 0 0 5px var(--color-primary);
+  margin-bottom: 5px;
+}
+
+@keyframes sithGlow {
+  0% { text-shadow: 0 0 10px rgba(255, 0, 0, 0.9), 0 0 20px rgba(255, 50, 50, 0.7); }
+  50% { text-shadow: 0 0 15px rgba(255, 50, 50, 1), 0 0 30px rgba(255, 0, 0, 1); }
+  100% { text-shadow: 0 0 10px rgba(255, 0, 0, 0.9), 0 0 20px rgba(255, 50, 50, 0.7); }
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.85; }
+  100% { opacity: 1; }
+}
+
+@keyframes fireEffect {
+  0% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(255, 50, 50, 0.9), 0 0 50px rgba(255, 0, 0, 0.7); }
+  100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4); }
+}
+
+@keyframes energyWaves {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.sith-quote {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-shadow: 0 0 15px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 50, 50, 0.7);
+  margin-top: 60px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  max-width: 900px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  animation: sithGlow 3s infinite alternate, fireEffect 2s infinite alternate, energyWaves 5s infinite;
+}
+
+.sith-quote::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0) 80%);
+  transform: translateX(-50%);
+  opacity: 0.8;
+  filter: blur(30px);
+  animation: flicker 4s infinite alternate;
+}
+
+.sith-quote p {
+  line-height: 1.6;
+  text-align: center;
+  animation: flicker 2s infinite alternate;
+}
+
+.sith-quote::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.gifer.com/origin/59/5958f150377b4c3b64c4e55c4487cb2f_w200.gif");
+  background-size: cover;
+  opacity: 0.2;
+  mix-blend-mode: screen;
+  animation: energyWaves 6s infinite alternate;
+}
+
+.sith-invitation {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  max-width: 800px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  animation: glowEffect 2s infinite alternate;
+}
+
+.sith-invitation p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 50, 50, 0.7);
+  margin-bottom: 15px;
+}
+
+.sith-logo-btn {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.7) 80%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 50, 50, 0.7);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.sith-logo-btn img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.9));
+  transition: transform 0.3s ease-in-out;
+}
+
+.sith-logo-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 1), 0 0 50px rgba(255, 50, 50, 0.9);
+}
+
+.sith-logo-btn:hover img {
+  transform: rotate(360deg);
+  filter: drop-shadow(0 0 15px rgba(255, 50, 50, 1));
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes glowEffect {
+  0% { box-shadow: 0 0 10px var(--color-primary); }
+  50% { box-shadow: 0 0 20px var(--color-primary), 0 0 40px rgba(255, 0, 0, 0.6); }
+  100% { box-shadow: 0 0 10px var(--color-primary); }
+}
+
+@media (max-width: 768px) {
+  .glow {
+      font-size: 2rem;
+  }
+
+  .sith-citation {
+      font-size: 1rem;
+      padding: 10px;
+  }
+
+  .sith-gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .sith-card {
+      width: 90%;
+      height: auto;
+  }
+
+  .sith-card img {
+      height: auto;
+      width: 100%;
+  }
+
+  .sith-description-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .sith-description {
+      width: 90%;
+      text-align: center;
+  }
+
+  .sith-logo-btn {
+      width: 80px;
+      height: 80px;
+  }
+
+  .sith-logo-btn img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .footer-text {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sith-gallery {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .sith-card {
+      width: 45%;
+  }
+
+  .sith-description {
+      width: 45%;
+  }
+}

@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url("components/button.css");
+@import url("components/laser.css");
+@import url("components/header.css");
+@import url("components/footer.css");
+@import url("components/main.css");
+@import url("../javascript/script.js");
+
+:root {
+    --color-bg: #000000;
+    --color-primary: #D90000;
+    --color-secondary: #800000;
+    --color-accent: #4B0082;
+    --color-text: #E5E5E5;
+    --color-shadow: #1A1A1A;
+    --color-glow: rgba(217, 0, 0, 0.7);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: red;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.9);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  from {
+      transform: translateY(-10px);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(100vh);
+      opacity: 0;
+  }
+}
+
+.floating-music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.floating-music-btn button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.floating-music-btn button:hover {
+  color: #ff0000;
+}
