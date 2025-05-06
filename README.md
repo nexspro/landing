@@ -16,7 +16,7 @@ This project was built to explore advanced **HTML** and **CSS** styling, focusin
 
 ##  Live Preview
 
-➡️ [Live Site](https://nexspro.github.io/landing/)
+[Live Site](https://nexspro.github.io/landing/)
 
 ##  Features
 
